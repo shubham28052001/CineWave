@@ -21,7 +21,7 @@ export default function Footer() {
     return (
         <footer className="bg-black text-gray-300 border-t border-gray-800 mt-2 text-sm">
 
-            <div className="max-w-7xl mx-auto py-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+            <div className="max-w-7xl mx-auto md:py-5 p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
 
                 {/* Section 1 - Logo */}
                 <div className='flex flex-col gap-5'>

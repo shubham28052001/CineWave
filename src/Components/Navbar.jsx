@@ -29,8 +29,8 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="sticky top-0 left-0 w-full z-10 px-4 md:px-8 py-2 flex items-center justify-between
-           bg-gray-900/80 shadow-sm transition-colors">
+        <nav className="relative sticky top-0 left-0 w-full z-10 px-4 md:px-8 py-2 flex items-center justify-between
+           bg-gray-900/80 shadow-sm transition-colors ">
 
             <div className="flex items-center gap-4 md:gap-10">
                 <Logo />
@@ -64,6 +64,21 @@ export default function Navbar() {
                 <Searchbar />
             </div>
 
+            <NavLink
+                to="/mood"
+                className={({ isActive }) => `relative md:hidden pr-3 flex items-center gap-2 px-3 py-1.5 rounded-xl transition-all duration-300 group
+                        ${isActive ? 'bg-yellow-500/10' : 'hover:bg-white/5'}`}
+            >
+                <div className="w-1.5 h-1.5 bg-yellow-500 rounded-full animate-pulse"></div>
+
+                <span className="text-sm font-bold tracking-wide bg-gradient-to-r from-[#FFC33C] to-[#ff9f1c] bg-clip-text text-transparent group-hover:brightness-110">
+                    Mood AI
+                </span>
+
+                <span className="text-[7px] font-black px-1.5 py-0.5 bg-[#FFC33C] text-black rounded-md leading-none shadow-sm shadow-yellow-500/20">
+                    NEW
+                </span>
+            </NavLink>
             {/* Mobile Hamburger */}
             <div className="flex md:hidden items-center gap-4">
                 <button
@@ -78,9 +93,7 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {menuOpen && (
-                <div className="absolute top-full left-0 w-full bg-gray-900/95 flex flex-col items-center gap-4 py-4 md:hidden">
-
-
+                <div className="absolute top-full left-0 w-full bg-gray-900/95 flex flex-col items-center gap-4 py-4 md:hidden z-50">
                     <div className="w-[80%]">
                         <Searchbar />
                     </div>

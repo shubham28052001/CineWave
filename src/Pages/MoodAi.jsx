@@ -144,9 +144,9 @@ export default function MoodAi() {
 
     return (
         <div className="relative min-h-screen bg-black text-white font-sans overflow-hidden">
-            <Navbar />
+            <Navbar className="relative z-50"/>
 
-            <section className="relative z-10 flex flex-col items-center pt-18 pb-24 px-6">
+            <section className="relative z-0 flex flex-col items-center pt-18 pb-24 px-6">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:50px_50px]"></div>
 
@@ -154,7 +154,7 @@ export default function MoodAi() {
 
                     <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_80%_60%_at_50%_40%,#000_20%,transparent_100%)]"></div>
                 </div>
-                <div className="z-10 animate-fade-in-down">
+                <div className="z-0 animate-fade-in-down">
                     <div className="flex items-center gap-2 px-4 py-1.5 border border-yellow-500/20 rounded-full bg-black/40 backdrop-blur-md">
                         <div className="w-1.5 h-1.5 bg-yellow-500 rounded-full animate-pulse"></div>
                         <span className="text-yellow-500 uppercase tracking-[0.3em] text-[10px] font-bold">
