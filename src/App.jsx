@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { loginSuccess, logout } from "./Redux/AuthSlice";
 import { auth } from "./Firebase/firebase";
 import TrendingMovies from './Pages/TrendingMovies';
-import ScrollToTop from './Components/ScrolltoTop';
+import ScrollToTop from './Components/ScrollToTop';
 import PopularPeople from './Pages/PopularPeople';
 const Landing = lazy(() => import("./Pages/Landing"))
 const Login = lazy(() => import("./Pages/Login"));
