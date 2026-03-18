@@ -21,7 +21,13 @@ function FilterMovie({ movies, loading }) {
     };
 
     const handleMovieClick = (movie) => {
-        navigate(`/details/${movie.media_type || 'movie'}/${movie.id}?type=${movie.media_type || 'movie'}`);
+        const type = movie.media_type
+            ? movie.media_type
+            : movie.title
+                ? 'movie'
+                : 'tv';
+
+        navigate(`/details/${type}/${movie.id}?type=${type}`);
     };
     return (
         <section className="bg-black text-white px-0.5 py-2">

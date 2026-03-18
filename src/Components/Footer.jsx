@@ -65,7 +65,7 @@ export default function Footer() {
                     <h3 className="text-sm font-semibold text-yellow-300/60 mb-2">Connect</h3>
                     <div className="flex flex-col gap-2">
                         <a
-                            href="https://github.com/"
+                            href="https://github.com/shubham28052001"
                             target="_blank"
                             className="hover:text-yellow-500 transition"
                             rel="noopener noreferrer"
@@ -74,7 +74,7 @@ export default function Footer() {
                         </a>
 
                         <a
-                            href="https://linkedin.com/"
+                            href="https://www.linkedin.com/in/shubham-sanodiya-5107a52a0/"
                             target="_blank"
                             className="hover:text-yellow-500 transition"
                             rel="noopener noreferrer"
@@ -83,7 +83,7 @@ export default function Footer() {
                         </a>
 
                         <a
-                            href="https://instagram.com/"
+                            href="https://www.instagram.com/_shubham_sanodiya"
                             target="_blank"
                             className="hover:text-yellow-500 transition"
                             rel="noopener noreferrer"
