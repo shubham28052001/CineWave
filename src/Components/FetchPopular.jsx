@@ -13,7 +13,7 @@ export default function FetchTrending() {
 
     if (error) {
         return (
-            <div className="flex items-center justify-center bg-black mt-2">
+            <div className="flex items-center justify-center bg-black  mt-2">
                 <div className="bg-yellow-500/10 border border-yellow-500 text-yellow-400 px-20 py-1 rounded-lg text-center max-w-md">
                     <h2 className="text-xl font-semibold mb-2">⚠️ API Error</h2>
                     <p className="text-sm">
@@ -35,11 +35,13 @@ export default function FetchTrending() {
 
     return (
 
-        <MovieCarousel
+       <div className='mt-[-100px] md:mt-0'>
+         <MovieCarousel
             title="Film"
             subtitle="Popular Movies"
             movies={PopularMovie}
             loading={isLoading || PopularMovie.length === 0}
         />
+       </div>
     );
 }

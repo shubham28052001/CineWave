@@ -25,7 +25,7 @@ function MovieCarousel({ title, subtitle, movies, loading }) {
     };
 
     return (
-        <section className="bg-black text-white px-2 md:px-8 py-2">
+        <section className="bg-black text-white px-4 md:px-8 py-2">
             {title && <h2 className="text-[12px] font-black text-yellow-300 uppercase tracking-wider">{title}</h2>}
             {subtitle && <h3 className="text-3xl md:text-4xl font-black mb-4">{subtitle}</h3>}
 

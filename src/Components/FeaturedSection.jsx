@@ -44,7 +44,7 @@ export default function FeaturedSection() {
     if (isLoading || !Featured.length) {
         return (
             <SkeletonTheme baseColor="#1a1a1c" highlightColor="#323235">
-                <div className="bg-black min-h-screen text-white p-4 md:p-10">
+                <div className="bg-black min-h-screen text-white p-2 md:p-10">
                     <div className="flex justify-between items-center mb-6">
                     </div>
                     <div className="grid lg:grid-cols-4 gap-6">
