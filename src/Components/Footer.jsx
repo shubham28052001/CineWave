@@ -7,17 +7,17 @@ import { signOut } from "firebase/auth";
 import { auth } from "../Firebase/firebase";
 
 export default function Footer() {
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const navigate = useNavigate();
-        const handleLogout = async () => {
-            try {
-                await signOut(auth);
-                dispatch(logout());
-                navigate("/login");
-            } catch (err) {
-                console.log("Logout error:", err);
-            }
-        };
+    const handleLogout = async () => {
+        try {
+            await signOut(auth);
+            dispatch(logout());
+            navigate("/login");
+        } catch (err) {
+            console.log("Logout error:", err);
+        }
+    };
     return (
         <footer className="bg-black text-gray-300 border-t border-gray-800 mt-2 text-sm">
 
@@ -49,7 +49,7 @@ export default function Footer() {
                     <div className="flex flex-col gap-2">
                         <Link to="/movies" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:text-yellow-500 transition">Movies</Link>
                         <Link to="/TvShows" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:text-yellow-500 transition">TV Shows</Link>
-                        <div className="hidden md:flex flex-none">
+                        <div className="md:flex flex-none">
                             <button
                                 onClick={handleLogout}
                                 className="hover:text-yellow-500 transition cursor-pointer"

@@ -78,7 +78,7 @@ export const fetchNowplaying = createAsyncThunk("nowplaying/fetchNowplaying", as
 export const fetchFeatured = createAsyncThunk("featured/fetch", async () => {
     const response = await fetch(`${BASE_URL}/trending/all/day?api_key=${API_KEY}`);
     const data = await response.json();
-    return data.results.slice(0, 6);
+    return data.results.slice(0, 5);
 });
 
 export const fetchTopRated = createAsyncThunk("TopRated/fetchTopRated", async (page = 1) => {

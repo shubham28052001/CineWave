@@ -14,7 +14,7 @@ import React from "react";
             </div>
 
             {/* Info */}
-            <div className="flex-1 md:mt-16">
+            <div className="flex-1 mt-0 md:mt-16">
                 {/* Genres + Type */}
                 <div className="flex flex-wrap gap-1">
                     {movie.genres?.map(g => (
@@ -41,11 +41,11 @@ import React from "react";
                     <span>{type === 'tv' ? `${movie.number_of_seasons} Seasons` : `${movie.runtime} min`}</span>
                 </div>
 
-                {movie.tagline && (
+                {
                     <p className="text-yellow-500/90 italic text-sm md:text-base mt-2">
-                        {movie.tagline}
+                        {movie.tagline || "Sorry No Tagline for this Movie"}
                     </p>
-                )}
+                }
 
                 {/* Overview */}
                 <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-2xl mb-6">

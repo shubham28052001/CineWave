@@ -37,7 +37,7 @@ export default function App() {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className='selection:bg-[#FFC33C] selection:text-black'>
       <Suspense fallback={<div className="flex items-center justify-center h-screen bg-gray-800/90">
         <div className="w-10 h-10 border-4 border-red-500 border-t-transparent rounded-full animate-spin"></div>
       </div>
@@ -76,7 +76,7 @@ export default function App() {
           </AuthProtected>} />
 
           <Route path='/people' element={<AuthProtected>
-            <PopularPeople/>
+            <PopularPeople />
           </AuthProtected>} />
 
 

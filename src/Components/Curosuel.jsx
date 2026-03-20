@@ -125,7 +125,7 @@ export default function Carousel() {
 
 
     return (
-        <section className="relative w-full h-screen overflow-hidden bg-[#08080A] text-white selection:bg-[#FFC33C] selection:text-black">
+        <section className="relative w-full h-screen overflow-hidden bg-[#08080A] text-white">
             {/* Background */}
             <div className="absolute inset-0 z-0">
                 <div
@@ -219,7 +219,7 @@ export default function Carousel() {
             {/* Scroll */}
             <div className="absolute md:bottom-10 bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
                 <div className="w-3 h-5 border border-white rounded-full flex justify-center p-1">
-                    <div className="w-1 h-2 bg-yellow-500 rounded-full animate-bounce" />
+                    <div className="w-1 h-3 bg-yellow-400 rounded-full animate-bounce" />
                 </div>
                 <span className="text-[8px] font-bold tracking-[0.3em] uppercase">Scroll</span>
             </div>

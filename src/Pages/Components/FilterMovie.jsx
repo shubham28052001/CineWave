@@ -29,6 +29,8 @@ function FilterMovie({ movies, loading }) {
 
         navigate(`/details/${type}/${movie.id}?type=${type}`);
     };
+
+   
     return (
         <section className="bg-black text-white px-0.5 py-2">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 pb-4">
@@ -66,6 +68,7 @@ function FilterMovie({ movies, loading }) {
                                             {movie.vote_average ? movie.vote_average.toFixed(1) : 'N/A'}
                                         </span>
                                     </div>
+
                                 </div>
 
                                 <div className="mt-2">

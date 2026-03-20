@@ -124,7 +124,7 @@ export default function FeaturedSection() {
                 </div>
 
                 {/* Sidebar */}
-                <div className="md:flex hidden flex-col space-y-3 h-[500px] overflow-y-auto pr-2 custom-scrollbar">
+                <div className="md:flex hidden flex-col space-y-3 h-[500px] overflow-y-auto pr-2 scrollbar-hide">
                     {Featured.map((movie) => (
                         <div
                             key={movie.id}

@@ -1,7 +1,7 @@
 import { Guitar } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
-const usernames = ["shubham28052001", "harshilrajguru", "divyesh2123"];
+const usernames = ["divyesh2123", "shubham28052001", "harshilrajguru", "Harshdmali"];
 
 function Github() {
     const [users, setUsers] = useState([]);
@@ -42,7 +42,7 @@ function Github() {
                 {users.map((user, index) => (
                     <div
                         key={user.login}
-                        className="group relative w-[260px] bg-[#0D0D0F] border border-white/5 rounded-2xl p-6 overflow-hidden transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] hover:border-yellow-500/30"
+                        className="group relative w-[260px] bg-[#0D0D0F] border  border-white/5 rounded-2xl p-6 overflow-hidden transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] hover:border-yellow-500/30"
                     >
                         <div className="flex items-center gap-4 mb-3">
                             <img
@@ -51,22 +51,34 @@ function Github() {
                                 className="w-16 h-16 rounded-full border-2 border-white/10 p-1 object-cover transition-colors duration-500 group-hover:border-yellow-500/50"
                             />
                             <div>
-                                <h2 className="text-sm font-bold text-white">{user.name || user.login}</h2>
+                                <h2 className="text-sm font-bold text-white capitalize">{user.name || user.login}</h2>
                                 <p className="text-yellow-500/60 text-sm font-medium">@{user.login}</p>
                             </div>
                         </div>
 
-                       
+
                         <div className="mb-4 py-2 px-4 rounded-xl border border-white/5 bg-white/[0.02] text-[10px] font-black uppercase tracking-wider text-white">
-                            {index === 0 ? "FUllStack Developer & API Integrator" : index === 1 ? "UI/Ux designer" : "Expert"}
+                            {
+                                index === 0
+                                    ? "Software Specialist"
+                                    : index === 1
+                                        ? "Founder & FullStack Developer"
+                                        : index === 2
+                                            ? "UI/UX Designer"
+                                            : "AI Engineer"
+                            }
                         </div>
 
-                        
+
                         <p className="text-gray-400 text-sm mb-4 h-16 overflow-hidden">
-                            {user.bio}
+                            {
+                                index === 3
+                                    ? "AI Engineer designing intelligent and innovative solutions with machine learning and neural networks."
+                                    : (user.bio || "Passionate UI/UX designer crafting intuitive and engaging digital experiences. Skilled in wireframing, prototyping, and user-centered design.")
+                            }
                         </p>
 
-                        
+
                         <div className="flex gap-6 mb-4">
                             <div className="flex flex-col items-center">
                                 <span className="text-2xl font-black text-white group-hover:text-yellow-500 transition-colors">

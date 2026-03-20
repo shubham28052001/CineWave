@@ -12,6 +12,7 @@ import Navbar from "../Components/Navbar";
 import SimilarMovies from "../Components/SimilarMovies";
 import Footer from "../Components/Footer";
 
+
 export default function MovieDetail() {
   const { id } = useParams();
   const [searchParams] = useSearchParams();
@@ -28,9 +29,11 @@ export default function MovieDetail() {
   const handleWatchTrailer = useCallback(() => {
     dispatch(fetchTrailer({ id, type }));
     setShowModal(true);
-  },[dispatch, id, type]);
+  }, [dispatch, id, type]);
 
   const formatCurrency = (num) => (num && num > 0) ? "$" + (num / 1000000).toFixed(0) + "M" : "N/A";
+
+
 
   if (isLoading || !singleMovie) {
     return (
@@ -104,7 +107,6 @@ export default function MovieDetail() {
           </div>
         </div>
 
-        {/* Stats Row Skeleton */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-16 max-w-5xl mx-auto">
           {Array(5).fill(0).map((_, idx) => (
             <Skeleton
@@ -124,10 +126,10 @@ export default function MovieDetail() {
   if (!singleMovie) return null;
 
   return (
-    <div className="relative min-h-screen bg-black text-white font-sans overflow-hidden">
-       <div className="fixed top-0 left-0 w-full z-50">
-              <Navbar />
-            </div>
+    <div className="relative min-h-screen md:pt-0 pt-2 bg-black text-white font-sans overflow-hidden">
+      <div className="fixed top-0 left-0 w-full z-50">
+        <Navbar />
+      </div>
 
 
       <div className="absolute inset-0 z-0 h-[600px] md:h-[100vh]">
@@ -151,7 +153,8 @@ export default function MovieDetail() {
           onWatchTrailer={handleWatchTrailer}
         />
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-16 max-w-5xl">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-10 md:mt-16 max-w-5xl">
+
           {type === 'movie' ? (
             <>
               <StatBox label="RELEASE" value={singleMovie.release_date} />
@@ -182,10 +185,10 @@ export default function MovieDetail() {
         />
 
         <Cast />
-        <SimilarMovies/>
-       <div className="mb-[-36px]">
-         <Footer/>
-       </div>
+        <SimilarMovies />
+        <div className="mb-[-36px]">
+          <Footer />
+        </div>
 
 
       </div>

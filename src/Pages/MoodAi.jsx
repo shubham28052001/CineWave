@@ -158,7 +158,7 @@ export default function MoodAi() {
                     <div className="flex items-center gap-2 px-4 py-1.5 border border-yellow-500/20 rounded-full bg-black/40 backdrop-blur-md">
                         <div className="w-1.5 h-1.5 bg-yellow-500 rounded-full animate-pulse"></div>
                         <span className="text-yellow-500 uppercase tracking-[0.3em] text-[10px] font-bold">
-                            AI Movie Detection
+                            AI Mood Detection
                         </span>
                     </div>
                 </div>
@@ -171,7 +171,7 @@ export default function MoodAi() {
                 <div className="max-w-5xl w-full">
                     <div className="grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-2 items-center justify-center mb-10">
 
-                        <div className="relative rounded-3xl border border-white/30 bg-white/20 backdrop-blur-3xl shadow-2xl max-w-sm mx-auto md:w-[55%] w-full">
+                        <div className="relative rounded-3xl border border-white/30 backdrop-blur-3xl shadow-2xl max-w-sm mx-auto md:w-[55%] w-full">
                             <div className="relative h-[350px] w-full rounded-2xl bg-black overflow-hidden border border-white/5">
                                 {error && (
                                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[70%] bg-red-500 border border-red-500 backdrop-blur-md px-4 py-2 rounded-lg z-50 animate-bounce">

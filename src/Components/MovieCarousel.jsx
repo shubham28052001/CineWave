@@ -21,8 +21,15 @@ function MovieCarousel({ title, subtitle, movies, loading }) {
     };
 
     const handleMovieClick = (movie) => {
-        navigate(`/details/${movie.media_type || 'movie'}/${movie.id}?type=${movie.media_type || 'movie'}`);
+        const type = movie.media_type
+            ? movie.media_type
+            : movie.title
+                ? 'movie'
+                : 'tv';
+
+        navigate(`/details/${type}/${movie.id}?type=${type}`);
     };
+
 
     return (
         <section className="bg-black text-white px-4 md:px-8 py-2">
@@ -33,7 +40,7 @@ function MovieCarousel({ title, subtitle, movies, loading }) {
                 <SkeletonTheme baseColor="#1A1A1C" highlightColor="#2A2A2C">
                     {loading || !movies || movies.length === 0
                         ? renderSkeletons()
-                        : movies.map((movie,index) => (
+                        : movies.map((movie, index) => (
                             <div
                                 key={`${movie.id}-${index}`}
                                 className="relative flex-none w-36 sm:w-40 md:w-42 lg:w-42 cursor-pointer group rounded-2xl"

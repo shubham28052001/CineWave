@@ -18,15 +18,17 @@ export default function Dashboard() {
       <div className="fixed top-0 left-0 w-full z-50">
         <Navbar />
       </div>
-      <Curosuel/>
-      <Highlighted/>
-      <FetchTrending/>
-      <FetchNowPlaying/>
-      <FeaturedSection/>
-      <FetchPopular/>
-      <FetchTopRated/>
-      <FetchTvShows/>
-      <Footer/>
+<div className="pt-8">
+        <Curosuel />
+</div>
+      <Highlighted />
+      <FetchTrending />
+      <FetchNowPlaying />
+      <FeaturedSection />
+      <FetchPopular />
+      <FetchTopRated />
+      <FetchTvShows />
+      <Footer />
     </div>
   );
 }
